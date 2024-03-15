@@ -1,0 +1,16 @@
+GOAL = 10_000
+sum_steps = 0
+while sum_steps  < GOAL:
+    current_steps = input()
+    if current_steps == 'Going home':
+        last_steps = int(input())
+        sum_steps += last_steps
+        break
+    else:
+        current_steps = int(current_steps)
+        sum_steps += int(current_steps)
+if sum_steps >= GOAL:
+    print('Goal reached! Good job!')
+    print(f'{sum_steps - GOAL} steps over the goal!')
+else:
+    print(f'{GOAL - sum_steps} more steps to reach goal.')
